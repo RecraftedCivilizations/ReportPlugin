@@ -21,23 +21,23 @@ public class BugReport
     public void onDisable() {}
 
     // Here is smth missing, Take a look at the first argument
-    public boolean onCommand((CommandSender, Command cmd, String label, String[] args)
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
         // Here u see what is missing
         Player player = (Player)sender;
 
         FileConfiguration config = getConfig();
-        String arg;
+
         // One bracket to much
-        if ((cmd.getName().equalsIgnoreCase("bugreport")) && (sender instanceof Player)))
+        if ((cmd.getName().equalsIgnoreCase("bugreport")) && ((sender instanceof Player)))
         {
             // length not lenght
-          if (args.lenght >= 1)
+          if (args.length >= 1)
           {
             String bugMessage = "";
 
             // Idk what exactly is wrong here but intellij complains
-            for (arg : args) {
+            for(String arg:args) {
               bugMessage = bugMessage + arg + " ";
             }
 
@@ -58,7 +58,7 @@ public class BugReport
         if ((cmd.getName().equalsIgnoreCase("bugs")) && ((sender instanceof Player)))
         {
             // You have a 0 instead of an O
-          if (player.is0p())
+          if (player.isOp())
           {
 
            for (String key : config.getKeys(false)) {
@@ -79,11 +79,11 @@ public class BugReport
        if ((cmd.getName().equalsIgnoreCase("delbug")) && ((sender instanceof Player)))
        {
            // Again 0 instead of O
-        if ((args.length == 1) && (player.is0p()))
+        if ((args.length == 1) && (player.isOp()))
         {
             // Idk what you are trying to do but this is wrong
             // And you have one bracket to much
-         if (config.contains[0].toLowerCase()))
+         if (config.contains(args[0].toLowerCase()))
          {
           config.set(args[0].toLowerCase(), null);
           saveConfig();
