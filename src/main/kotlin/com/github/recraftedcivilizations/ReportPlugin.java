@@ -1,6 +1,8 @@
 package com.github.recraftedcivilizations
 
 import java.util.Set;
+
+import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -11,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 
 public class BugReport
-  extends JavaPlugin
+  extends ARecraftedPlugin
 {
     public BugReport() {}
 
