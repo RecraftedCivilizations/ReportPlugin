@@ -50,6 +50,14 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     }
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/kotlin"
+        }
+    }
+}
+
 // plugin.yml
 bukkit {
     meta {
