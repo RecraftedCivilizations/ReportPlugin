@@ -1,5 +1,11 @@
 package com.github.recraftedcivilizations
+// A ; is missing, Intellij tries to tell u
 
+
+// And please just remove the other ReportPlugin.kt file
+
+
+// This import is unnecessary and can be removed
 import java.util.Set;
 
 import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin;
@@ -10,13 +16,20 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 
-
+// Please name this class Main
+// You need to implement CommandExecutor
+// public class Main extends ARecraftedPlugin implements CommandExecutor
 public class BugReport
   extends ARecraftedPlugin
 {
     public BugReport() {}
 
-    public void onEnable() {}
+    public void onEnable() {
+        // You need to register your commands,
+        // here is a small tutorial on how to do that https://www.spigotmc.org/wiki/create-a-simple-command/
+        // If you have questions or are not sure, rather write me a message then not knowing what you are doing
+
+    }
 
     public void onDisable() {}
 
@@ -89,3 +102,7 @@ public class BugReport
     return false;
   }
 }
+
+// Looks great until now, if you compile it now it should work
+// To compile choose Gradle > Tasks > shadow > shadowJar
+// The output jar file will be in build/libs, send me the .jar file in there and I ll upload it
